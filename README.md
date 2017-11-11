@@ -1,4 +1,4 @@
 # ProgLangs2k17
 
 # Задание №2
-https://jsfiddle.net/5pe7djoz/7/
+https://jsfiddle.net/anatastasia/88h203b5/
