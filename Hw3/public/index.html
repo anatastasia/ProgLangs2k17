@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Served by Node.js</title>
+    <style>
+        #messages {
+            min-height: 5cm;
+        }
+        #input {
+            min-height: 2cm;
+        }
+        .myself {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="messages">
+
+    </div>
+    <div style="border: 1pt solid black;" contenteditable="true" id="input"></div>
+    <button id="send" onclick="sendMessage()">Send</button>
+
+    <script src = "client.js"></script>
+</body>
+</html>
