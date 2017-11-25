@@ -9,6 +9,7 @@ ws.addEventListener("message", function (event) {
     msg.innerText = "From [" + data.browser + "]: "+ data.text;
     messages.appendChild(msg);
 });
+
 function sendMessage() {
     const input = document.getElementById("input");
     const text = input.innerHTML;
@@ -21,4 +22,17 @@ function sendMessage() {
     myMsg.innerText = text;
     myMsg.classList.add("myself");
     messages.appendChild(myMsg);
+}
+
+function drawField() {
+    for (var i = 0; i < 10; i++) {
+        var row = document.querySelector("table").insertRow(i)
+        for (var j = 0; j < 10; j++) {
+            var cell = row.insertCell(j);
+            cell.id = String(i) + ":" + String(j);
+            cell.addEventListener("click", function(event) {
+                cell.innerText = "♞";
+            });
+        }
+    }
 }

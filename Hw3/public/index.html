@@ -4,24 +4,20 @@
     <meta charset="UTF-8">
     <title>Served by Node.js</title>
     <style>
-        #messages {
-            min-height: 5cm;
+        td {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
         }
-        #input {
-            min-height: 2cm;
-        }
-        .myself {
-            color: green;
+        
+        td:hover {
+            background: #ece7ff;
         }
     </style>
+    <script src = "client.js"></script>
 </head>
 <body>
-    <div id="messages">
-
-    </div>
-    <div style="border: 1pt solid black;" contenteditable="true" id="input"></div>
-    <button id="send" onclick="sendMessage()">Send</button>
-
-    <script src = "client.js"></script>
+    <table></table>
+    <script>drawField();</script>
 </body>
 </html>
