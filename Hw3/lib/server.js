@@ -7,15 +7,15 @@ const ws = require("ws");
 function handleWsConnection(clientWebSocket) {
     const allClients = this.clients;
     console.log("Connected some client via web socket");
-    clientWebSocket.on('message', function (messageData) {
-       console.log("Got message: " + messageData);
+    clientWebSocket.on("message", function (turnData) {
+       console.log("Got message: " + turnData);
        for (var i=0; i<allClients.length; ++i) {
            var client = allClients[i];
            if (client != clientWebSocket) {
-               client.send(messageData);
+               client.send(turnData);
            }
        }
-    });
+   });
 }
 
 
